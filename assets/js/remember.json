@@ -1,0 +1,17 @@
+
+  
+
+  {
+    "sounds": [
+        { "id": "sound1", "src": "../assets/images/read/sound/al1.mp3" },
+        { "id": "sound2", "src": "../assets/images/read/sound/al2.mp3" },
+        { "id": "sound3", "src": "../assets/images/read/sound/al3.mp3" },
+        { "id": "sound4", "src": "../assets/images/read/sound/al4.mp3" },
+        { "id": "sound5", "src": "../assets/images/read/sound/al5.mp3" },
+        { "id": "sound6", "src": "../assets/images/read/sound/al6.mp3" },
+        { "id": "sound7", "src": "../assets/images/read/sound/al7.mp3" },
+        { "id": "sound8", "src": "../assets/images/read/sound/al8.mp3" },
+        { "id": "sound9", "src": "../assets/images/read/sound/al9.mp3" },
+        { "id": "sound10", "src": "../assets/images/read/sound/al10.mp3" }
+    ]
+}

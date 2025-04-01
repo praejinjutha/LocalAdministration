@@ -1,0 +1,588 @@
+สวัสดีฉันทำเกมลากเส้นจับคู่ มี 3 ไฟล์ ไฟล์แรกคือไฟล์เกม 
+document.addEventListener('DOMContentLoaded', function () {
+    const images = {
+        'al1.png': 'pical1.png',
+        'al2.png': 'pical2.png',
+        'al3.png': 'pical3.png',
+        'al4.png': 'pical4.png',
+        'al5.png': 'pical5.png',
+        'al6.png': 'pical6.png',
+        'al7.png': 'pical7.png',
+        'al8.png': 'pical8.png',
+        'al9.png': 'pical9.png',
+        'al10.png': 'pical10.png',
+        'al11.png': 'pical11.png',
+        'al12.png': 'pical12.png',
+        'al13.png': 'pical13.png',
+        'al14.png': 'pical14.png',
+        'al15.png': 'pical15.png',
+        'al16.png': 'pical16.png',
+        'al17.png': 'pical17.png',
+        'al18.png': 'pical18.png',
+        'al19.png': 'pical19.png',
+        'al20.png': 'pical20.png'
+    };
+
+    let usedQuestions = [];
+    const numQuestions = 4;
+    let currentPage = 1;
+    let matchedPairs = 0;
+    let timer;
+    const totalTime = 10; // 10 วินาทีสำหรับแต่ละหน้า
+
+    function getRandomQuestions(allImages, numQuestions) {
+        const filteredQuestions = Object.keys(allImages).filter(img => !usedQuestions.includes(img));
+        const selectedQuestions = shuffleArray(filteredQuestions).slice(0, numQuestions);
+        usedQuestions.push(...selectedQuestions);
+        return selectedQuestions;
+    }
+
+    const randomImages = getRandomQuestions(images, numQuestions);
+    sessionStorage.setItem('selectedImages', JSON.stringify(randomImages));
+
+    function shuffleArray(array) {
+        for (let i = array.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [array[i], array[j]] = [array[j], array[i]];
+        }
+        return array;
+    }
+
+    function shuffleAndAssignImages(selectedImages) {
+        const leftBoxes = document.querySelectorAll('.column.left .box');
+        const rightBoxes = document.querySelectorAll('.column.right .box');
+
+        const pairs = selectedImages.map(image => ({
+            al: image,
+            pical: images[image]
+        }));
+
+        const shuffledPairs = shuffleArray(pairs);
+
+        const leftImages = shuffledPairs.map(pair => pair.al);
+        const rightImages = shuffledPairs.map(pair => pair.pical);
+
+        const randomLeftIndices = shuffleArray([...Array(leftBoxes.length).keys()]);
+        randomLeftIndices.forEach((randomIndex, index) => {
+            const imgSrc = ../assets/images/gamedrawlines/alphabet/${leftImages[index]};
+            leftBoxes[randomIndex].querySelector('img').src = imgSrc;
+        });
+
+        const randomRightIndices = shuffleArray([...Array(rightBoxes.length).keys()]);
+        randomRightIndices.forEach((randomIndex, index) => {
+            const imgSrc = ../assets/images/gamedrawlines/picalphabet/${rightImages[index]};
+            rightBoxes[randomIndex].querySelector('img').src = imgSrc;
+        });
+    }
+
+    const selectedImages = JSON.parse(sessionStorage.getItem('selectedImages')) || [];
+    shuffleAndAssignImages(selectedImages);
+
+    const canvas = document.getElementById('drawingCanvas');
+    const ctx = canvas.getContext('2d');
+
+    function resizeCanvas() {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    }
+    resizeCanvas();
+    window.addEventListener('resize', resizeCanvas);
+
+    let isDrawing = false;
+    let startDot = null;
+    let startX, startY;
+    let paths = [];
+    let currentPath = [];
+
+    document.body.style.userSelect = 'none';
+
+    function getCanvasCoordinates(x, y) {
+        const rect = canvas.getBoundingClientRect();
+        return {
+            x: x - rect.left,
+            y: y - rect.top
+        };
+    }
+
+    function startDrawing(e) {
+        const dot = e.target.closest('.dot.start');
+        if (dot && !dot.classList.contains('used')) {
+            isDrawing = true;
+            startDot = dot;
+
+            const rect = dot.getBoundingClientRect();
+            const canvasPos = getCanvasCoordinates(rect.x + rect.width / 2, rect.y + rect.height / 2);
+
+            ctx.beginPath();
+            ctx.moveTo(canvasPos.x, canvasPos.y);
+            currentPath = [{ x: canvasPos.x, y: canvasPos.y }];
+        }
+    }
+
+    function draw(e) {
+        if (!isDrawing) return;
+
+        const mouseX = e.clientX || e.touches[0].clientX;
+        const mouseY = e.clientY || e.touches[0].clientY;
+        const canvasPos = getCanvasCoordinates(mouseX, mouseY);
+        
+        ctx.lineTo(canvasPos.x, canvasPos.y);
+        ctx.strokeStyle = 'blue';
+        ctx.lineWidth = 5;
+        ctx.stroke();
+        
+        currentPath.push({ x: canvasPos.x, y: canvasPos.y });
+    }
+
+    const correctPairs = {
+        'al1.png': 'pical1.png',
+        'al2.png': 'pical2.png',
+        'al3.png': 'pical3.png',
+        'al4.png': 'pical4.png',
+        'al5.png': 'pical5.png',
+        'al6.png': 'pical6.png',
+        'al7.png': 'pical7.png',
+        'al8.png': 'pical8.png',
+        'al9.png': 'pical9.png',
+        'al10.png': 'pical10.png',
+        'al11.png': 'pical11.png',
+        'al12.png': 'pical12.png',
+        'al13.png': 'pical13.png',
+        'al14.png': 'pical14.png',
+        'al15.png': 'pical15.png',
+        'al16.png': 'pical16.png',
+        'al17.png': 'pical17.png',
+        'al18.png': 'pical18.png',
+        'al19.png': 'pical19.png',
+        'al20.png': 'pical20.png'
+    };
+
+    let score = 0; // Reset score to zero on each page load
+const scoreDisplay = document.getElementById('score-display');
+
+function toThaiNumerals(num) {
+    const thaiNumerals = '๐๑๒๓๔๕๖๗๘๙';
+    return num.toString().split('').map(digit => thaiNumerals[digit]).join('');
+}
+
+function updateScore() {
+    scoreDisplay.innerText = + ${score};
+}
+
+
+
+// Function to reset used dots
+function resetDots() {
+    const allDots = document.querySelectorAll('.dot');
+    allDots.forEach(dot => {
+        dot.classList.remove('used', 'used-dot'); // Remove both 'used' and 'used-dot' classes
+    });
+}
+
+        function stopDrawing(e) {
+    if (!isDrawing) return;
+    isDrawing = false;
+
+    const mouseX = e.clientX || (e.touches[0] && e.touches[0].clientX);
+    const mouseY = e.clientY || (e.touches[0] && e.touches[0].clientY);
+    
+    const endDot = document.elementFromPoint(mouseX, mouseY)?.closest('.dot.end');
+    const isEndDotUsed = endDot && endDot.classList.contains('used');
+
+    // Check if there is a valid endDot
+    if (endDot && startDot) {
+        const startImage = startDot.closest('.box').querySelector('img').src.split('/').pop();
+        const endImage = endDot.closest('.box').querySelector('img').src.split('/').pop();
+
+        let correct = correctPairs[startImage] === endImage;
+
+// เพิ่มใน stopDrawing() หลังจากที่คู่ถูกต้อง
+if (correct) {
+    score++;
+    updateScore();
+    sessionStorage.setItem('totalScore', score);
+}
+
+// เก็บคู่ที่ทำเสร็จล่าสุด (ไม่สนใจว่าถูกหรือผิด)
+const recentAnswers = JSON.parse(localStorage.getItem('recentAnswers')) || [];
+recentAnswers.push([startImage, endImage]); // เก็บคู่ที่ทำเสร็จ
+if (recentAnswers.length > 12) recentAnswers.shift(); // เก็บเพียง 12 คู่ล่าสุด
+localStorage.setItem('recentAnswers', JSON.stringify(recentAnswers));
+
+
+
+        paths.push({ start: startDot, end: endDot, path: currentPath });
+        startDot.classList.add('used');
+        endDot.classList.add('used');
+        startDot.classList.add('used-dot');
+        endDot.classList.add('used-dot');
+
+        const overlayImage = document.createElement('img');
+        overlayImage.src = correct ? '../assets/images/gamedrawlines/correct.png' : '../assets/images/gamedrawlines/false.png';
+        overlayImage.className = 'overlay-image';
+        overlayImage.style.position = 'absolute';
+        overlayImage.style.top = '50%';
+        overlayImage.style.left = '50%';
+        overlayImage.style.transform = 'translate(-50%, -50%)';
+        overlayImage.style.width = '30%';
+        overlayImage.style.height = 'auto';
+        overlayImage.style.pointerEvents = 'none';
+        endDot.closest('.box').appendChild(overlayImage);
+
+        // Set line color
+        ctx.strokeStyle = correct ? 'green' : 'red';
+        ctx.lineWidth = 5;
+
+        // Draw path
+        ctx.beginPath();
+        currentPath.forEach(point => {
+            ctx.lineTo(point.x, point.y);
+        });
+
+        const endPos = getCanvasCoordinates(
+            endDot.getBoundingClientRect().x + endDot.getBoundingClientRect().width / 2,
+            endDot.getBoundingClientRect().y + endDot.getBoundingClientRect().height / 2
+        );
+
+        ctx.lineTo(endPos.x, endPos.y);
+        ctx.stroke();
+        ctx.closePath();
+
+        matchedPairs++;
+
+        // Check if all pairs matched
+        if (matchedPairs >= 4) {
+    setTimeout(() => {
+        // Clear the canvas
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        // Reset paths
+        paths = [];
+        currentPath = [];
+        isDrawing = false;
+        startDot = null;
+
+        // Reset used dots
+        resetDots(); // Call the function to reset dots
+
+        // Clear overlay images
+        const overlayImages = document.querySelectorAll('.overlay-image');
+        overlayImages.forEach(image => image.remove()); // Remove all overlay images
+
+        // Go to the next page
+        if (currentPage < 3) {
+            currentPage++;
+            matchedPairs = 0;
+            const nextImages = getRandomQuestions(images, numQuestions);
+            sessionStorage.setItem('selectedImages', JSON.stringify(nextImages));
+            shuffleAndAssignImages(nextImages);
+        } else {
+            // เปลี่ยนเส้นทางไปยังไฟล์ scoredrawline พร้อมคะแนนในพารามิเตอร์ URL
+var scoredrawlineUrl = "<?= site_url('scoredrawline') ?>";
+window.location.href = ${scoredrawlineUrl}?score=${score};
+
+        }
+    }, 1000);
+}
+
+    } else {
+        // Clear current path only when not reaching valid endDot
+        if (!endDot || (isEndDotUsed && startDot)) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            redrawPaths();
+        }
+    }
+
+    // Reset currentPath for the next attempt
+    currentPath = [];
+    startDot = null;
+}
+
+
+// Function to remove overlay images
+function removeOverlayImages() {
+    const overlayImages = document.querySelectorAll('.overlay-image');
+    overlayImages.forEach(image => image.remove());
+}
+
+
+function redrawPaths() {
+    paths.forEach(({ start, end, path }) => {
+        const startPos = getCanvasCoordinates(start.getBoundingClientRect().x + start.getBoundingClientRect().width / 2, start.getBoundingClientRect().y + start.getBoundingClientRect().height / 2);
+        const endPos = getCanvasCoordinates(end.getBoundingClientRect().x + end.getBoundingClientRect().width / 2, end.getBoundingClientRect().y + end.getBoundingClientRect().height / 2);
+        
+        ctx.beginPath();
+        ctx.moveTo(startPos.x, startPos.y);
+        path.forEach(point => {
+            ctx.lineTo(point.x, point.y); // วาดตามจุดที่บันทึก
+        });
+        ctx.lineTo(endPos.x, endPos.y); // เชื่อมต่อกับ end dot
+
+        // ตั้งค่าสีเส้นตามว่าผลลัพธ์นี้เป็นคู่ที่ถูกต้องหรือไม่
+        const startImage = start.closest('.box').querySelector('img').src.split('/').pop();
+        const endImage = end.closest('.box').querySelector('img').src.split('/').pop();
+        ctx.strokeStyle = correctPairs[startImage] === endImage ? 'green' : 'red'; // สีตามความตรงกัน
+
+        ctx.stroke();
+        ctx.closePath();
+    });
+}
+
+// การลงทะเบียนเหตุการณ์
+document.querySelectorAll('.dot.start').forEach(dot => {
+    dot.addEventListener('mousedown', startDrawing);
+    dot.addEventListener('touchstart', startDrawing);
+});
+
+canvas.addEventListener('mousemove', draw);
+canvas.addEventListener('touchmove', draw);
+canvas.addEventListener('mouseup', stopDrawing);
+canvas.addEventListener('touchend', stopDrawing);
+canvas.addEventListener('mouseleave', stopDrawing);
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+    const countdownPopup = document.getElementById('countdown-popup');
+    const countdownTimer = document.getElementById('countdown-timer');
+    const wrapper = document.querySelector('.wrapper');
+    const overlay = document.getElementById('overlay');
+    const timeoutPopup = document.getElementById('timeout-popup');
+    const restartButton = document.getElementById('restart-button');
+    const timeDisplay = document.getElementById('time-display');
+    let timeLeft = 2; // ตั้งเวลาเริ่มที่ 2 วินาที
+    let gameTimeLeft = 30; // เริ่มต้นจับเวลาเกมที่ 30 วินาที
+
+    // ฟังก์ชันเพื่อแปลงตัวเลขเป็นเลขไทย
+    function toThaiNumerals(num) {
+        const thaiNumerals = '๐๑๒๓๔๕๖๗๘๙';
+        return num.toString().split('').map(digit => thaiNumerals[digit]).join('');
+    }
+
+    // เริ่มต้นการแสดง countdown 2 วินาที
+    countdownPopup.style.display = 'flex';
+    overlay.style.display = 'block'; // แสดง overlay
+
+    const countdownTimerInterval = setInterval(function () {
+        if (timeLeft <= 0) {
+            clearInterval(countdownTimerInterval);
+            countdownPopup.style.display = 'none';
+            overlay.style.display = 'none'; // ซ่อน overlay
+            wrapper.style.display = 'block'; // แสดงเนื้อหาหลัก
+            startGameTimer(); // เริ่มจับเวลาเกม 30 วินาทีหลังจาก countdown
+        } else {
+            countdownTimer.textContent = timeLeft; // แสดงเวลาในรูปแบบอารบิก
+
+            timeLeft--;
+        }
+    }, 1000);
+
+    // ฟังก์ชันจับเวลาเกม 30 วินาที
+    function startGameTimer() {
+        const gameTimerInterval = setInterval(function () {
+            if (gameTimeLeft <= 0) {
+                clearInterval(gameTimerInterval);
+                showTimeoutPopup(); // แสดงป๊อปอัปเมื่อหมดเวลา
+            } else {
+                const minutes = Math.floor(gameTimeLeft / 60);
+                const seconds = gameTimeLeft % 60;
+                // แสดงเวลาในรูปแบบ (๐๐:๓๐) โดยใช้เลขไทย
+                timeDisplay.textContent = ${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')};
+
+                gameTimeLeft--;
+            }
+        }, 1000);
+    }
+
+    // ฟังก์ชันแสดงป๊อปอัปเมื่อเวลาหมด
+    function showTimeoutPopup() {
+        timeDisplay.textContent = ${toThaiNumerals('00')}:${toThaiNumerals('00')};
+        timeoutPopup.style.display = 'flex'; // เปลี่ยนเป็น flex เพื่อแสดง popup กลางจอ
+    }
+    
+
+// ฟังก์ชันเริ่มเกมใหม่เมื่อกดปุ่ม 'เริ่มใหม่'
+restartButton.addEventListener('click', function () {
+    timeoutPopup.style.display = 'none'; // ซ่อนป๊อปอัป
+    location.reload(); // รีโหลดหน้าเว็บ
+});
+});
+
+
+ไฟล์ที่ 2 คือไฟล์หน้าแสดงคะแนน
+<!-- ปุ่มเฉลย -->
+<div class="answer-container">
+    <img src="../assets/images/gamedrawlines/answer.png" class="img-fluid answer-image" alt="">
+</div>
+
+<!-- popup เฉลย -->
+<div id="answer-popup" style="display: none;">
+    <div id="correct-answers-container" class="answer-content"></div>
+    <button class="close-btn">X</button> <!-- ปุ่มปิด popup -->
+</div>
+
+
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // รับค่าคะแนนจาก URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const score = parseInt(urlParams.get('score')) || 0; // รับคะแนนจาก URL หรือให้เป็น 0 ถ้าไม่มี
+    localStorage.setItem('score', score); // บันทึกคะแนนลงใน localStorage เพื่อใช้งานในโค้ดที่มีอยู่แล้ว
+
+    // อ้างอิง element ที่จะใช้แสดงผล
+    const scoreDisplay = document.getElementById('score-display');
+    const rewardsContainer = document.getElementById('rewards-container');
+    const goodDisplay = document.getElementById('good-display');
+
+    // ฟังก์ชันแปลงคะแนนเป็นเลขไทย
+    function toThaiNumerals(number) {
+        const thaiNumerals = '๐๑๒๓๔๕๖๗๘๙';
+        return number.toString().split('').map(digit => thaiNumerals[parseInt(digit)]).join('');
+    }
+
+// แสดงคะแนนในรูปแบบเลขอารบิก
+scoreDisplay.textContent = +${score};
+
+
+    // กำหนดจำนวนเหรียญที่จะแสดง
+    const maxCoinsPerRow = 6;
+    const rows = Math.min(Math.ceil(score / maxCoinsPerRow), 2); // แสดงสูงสุด 2 แถว
+
+    for (let row = 0; row < rows; row++) {
+        const start = row * maxCoinsPerRow;
+        const end = Math.min(start + maxCoinsPerRow, score);
+        for (let i = start; i < end; i++) {
+            const img = document.createElement('img');
+            img.src = '../assets/images/gamedrawlines/reward.png';
+            img.alt = 'Reward';
+            img.className = 'reward';
+            
+            // เพิ่มดีเลย์ในการเด้ง
+            img.style.animationDelay = ${i * 0.1}s;
+            
+            rewardsContainer.appendChild(img);
+        }
+    }
+
+    // แสดงพลุเมื่อคะแนนมากกว่าหรือเท่ากับ 6
+    if (score >= 6) {
+        const goodImg = document.createElement('img');
+        goodImg.src = '../assets/images/gamedrawlines/good.png';
+        goodImg.alt = 'good';
+        goodImg.className = 'good';
+        goodDisplay.appendChild(goodImg);
+        
+        // เพิ่มการแสดงผลของพลุหรืออนิเมชั่นเพิ่มเติมที่นี่
+    }
+});
+</script>
+
+ไฟล์ที่ 3 คือแสดงเฉลย 12 ข้อล่าสุดที่เพิ่งทำ
+
+document.addEventListener('DOMContentLoaded', function () {
+    const answerButton = document.querySelector('.answer-image');
+    const popup = document.getElementById('answer-popup');
+
+    if (answerButton && popup) {
+        answerButton.addEventListener('click', showAnswerPopup);
+    } else {
+        console.error('Answer button or popup not found');
+    }
+
+    function showAnswerPopup() {
+        popup.style.display = 'block'; 
+        drawCorrectAnswers();
+    }
+
+    function drawCorrectAnswers() {
+        const canvas = document.createElement('canvas');
+        canvas.id = 'answer-canvas';
+        canvas.width = 800;
+        canvas.height = 800;
+        const ctx = canvas.getContext('2d');
+    
+        const popupContent = document.getElementById('correct-answers-container');
+        popupContent.innerHTML = ''; 
+        popupContent.appendChild(canvas);
+    
+        const allAnswers = JSON.parse(localStorage.getItem('recentAnswers') || '[]');
+        const displayedAnswers = allAnswers.slice(-12); // ใช้ -12 เพื่อดึงคู่คำตอบล่าสุด 12 คู่
+    
+        const leftX = 60;
+        const rightX = 500;
+        const startY = 20;
+        const gapY = 180;
+    
+        canvas.height = displayedAnswers.length * gapY + startY;
+    
+        displayedAnswers.forEach((pair, index) => {
+            const leftImage = new Image();
+            const rightImage = new Image();
+    
+            const yPosition = startY + index * gapY;
+    
+            leftImage.src = ../assets/images/gamedrawlines/alphabet/${pair[0]};
+            rightImage.src = ../assets/images/gamedrawlines/picalphabet/${pair[1]};
+    
+            leftImage.onload = function () {
+                ctx.drawImage(leftImage, leftX, yPosition, 130, 120);
+                const leftCenterY = yPosition + 70; 
+                const rightCenterY = yPosition + 70; 
+                drawArrow(ctx, leftX + 120, leftCenterY, rightX, rightCenterY);
+            }
+            
+            rightImage.onload = function () {
+                ctx.drawImage(rightImage, rightX, yPosition, 130, 130);
+            }
+        });
+    }
+    function drawArrow(ctx, fromX, fromY, toX, toY) {
+        const headLength = 10; // ความยาวของหัวลูกศร
+        const angle = Math.atan2(toY - fromY, toX - fromX);
+        
+        // ปรับตำแหน่งเริ่มต้นของลูกศรเพื่อไม่ให้ทับภาพ
+        const adjustedFromX = fromX + 20; // เพิ่มค่าที่นี่เพื่อให้ห่างจากภาพซ้าย
+        const adjustedToX = toX - 10; // ลดค่าที่นี่เพื่อให้ปลายลูกศรห่างจากภาพ
+        const adjustedToY = toY; // หรือคุณสามารถปรับค่า Y ได้ถ้าต้องการ
+    
+        // วาดเส้นตรง
+        ctx.beginPath();
+        ctx.moveTo(adjustedFromX, fromY); // ใช้ตำแหน่งที่ปรับแล้ว
+        ctx.lineTo(adjustedToX, adjustedToY); // ใช้ตำแหน่งที่ปรับแล้ว
+        ctx.strokeStyle = '#9164FF';
+        ctx.lineWidth = 2;
+        ctx.stroke();
+    
+        // วาดหัวลูกศรที่ปลายด้านขวา
+        ctx.beginPath();
+        ctx.moveTo(adjustedToX, adjustedToY);
+        ctx.lineTo(adjustedToX - headLength * Math.cos(angle - Math.PI / 6), adjustedToY - headLength * Math.sin(angle - Math.PI / 6));
+        ctx.lineTo(adjustedToX - headLength * Math.cos(angle + Math.PI / 6), adjustedToY - headLength * Math.sin(angle + Math.PI / 6));
+        ctx.fillStyle = '#9164FF';
+        ctx.fill();
+    
+        // วาดหัวลูกศรที่ปลายด้านซ้าย
+        ctx.beginPath();
+        ctx.moveTo(adjustedFromX, fromY);
+        ctx.lineTo(adjustedFromX + headLength * Math.cos(angle - Math.PI / 6), fromY + headLength * Math.sin(angle - Math.PI / 6));
+        ctx.lineTo(adjustedFromX + headLength * Math.cos(angle + Math.PI / 6), fromY + headLength * Math.sin(angle + Math.PI / 6));
+        ctx.fillStyle = '#9164FF';
+        ctx.fill();
+    }
+    
+    
+
+    function hidePopup() {
+        popup.style.display = 'none'; 
+    }
+
+    const closeBtn = document.querySelector('.close-btn');
+    if (closeBtn) {
+        closeBtn.addEventListener('click', hidePopup);
+    } else {
+        console.error('Close button not found');
+    }
+});
+
+
+

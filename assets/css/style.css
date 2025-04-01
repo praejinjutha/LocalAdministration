@@ -1,0 +1,520 @@
+body {
+  font-family: "Noto Sans Thai", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f5f5f5;
+}
+
+
+.custom-btn {
+  display: inline-block; /* ใช้ inline-block เพื่อให้มันเหมือนปุ่ม */
+  background-color: #155535 !important; /* สีพื้นหลัง */
+  color: white;
+  font-size: 20px;
+  height: 70px;
+  padding: 12px 20px; /* เพิ่มความสูงให้ปุ่ม */
+  border: none;
+  cursor: default !important; /* เคอร์เซอร์เป็นแบบปกติ */
+  line-height: 1.5; /* เพิ่มความสูงของบรรทัด */
+  border-radius: 5px; /* ขอบมน */
+  margin-bottom: 28px;
+  font-weight: 700;
+}
+
+h3 {
+  margin-top: 35px;
+}
+
+
+
+.header {
+  background-color: #155535;
+  color: white;
+  padding: 15px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.icon {
+display: inline-block;
+width: 32px;  /* กำหนดขนาดของไอคอน */
+height: 30px;
+background-size: cover;
+}
+
+.container {
+  display: flex;
+  height: calc(100vh - 50px);
+}
+
+
+/* แถบเมนูด้านข้าง */
+
+.menu {
+  width: 300px;
+  height: auto;
+  background-color: #D9D9D9;
+  padding: 20px 10px 10px 10px;
+}
+
+/* เมื่อ hover ที่ปุ่ม แต่ไม่ใช่ปุ่มที่มีคลาส .active */
+.menu button:not(.active):hover {
+  background-color: #696969;
+  color: white;
+  cursor: pointer;
+}
+
+.menu button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  text-align: left;
+  background-color: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: "Noto Sans Thai", sans-serif;
+
+}
+
+.menu .active {
+  background-color: #F6B541;
+}
+
+.content {
+  flex-grow: 1;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font-family: "Noto Sans Thai", sans-serif;
+}
+
+
+
+.tab-menu {
+  display: flex;
+  background-color: #D9D9D9;
+  height: 70px;
+  align-items: center; /* จัดตำแหน่งปุ่มให้ตรงกลางในแนวตั้ง */
+}
+
+.tab-menu a {
+  flex: 1;
+}
+
+.tab-menu button {
+  width: calc(100% - 20px); /* ลดขนาดความกว้างลงเพื่อเผื่อ margin */
+  margin: 0 10px; /* ระยะห่างซ้ายขวาเท่ากัน */
+  padding: 10px;
+  background-color: #D9D9D9;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: "Noto Sans Thai", sans-serif;
+  text-align: center;
+}
+
+
+.tab-menu .active button {
+  background-color: #F6B541!important;
+  color: black!important;
+  border-bottom: 2px solid #F6B541;
+}
+
+.tab-menu button:not(.active):hover {
+  background-color: #696969;
+  color: white;
+  cursor: pointer;
+}
+
+.tab-menu a, .menu a {
+  flex: 1;
+  text-decoration: none; /* ป้องกันไม่ให้มีเส้นขีดใต้ */
+}
+
+
+
+.input-box {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* ปรับตำแหน่งปุ่มไปทางขวา */
+  margin-top: 20px;
+}
+
+.button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Noto Sans Thai", sans-serif;
+}
+
+
+
+
+.input-box, label {
+  font-family: "Noto Sans Thai", sans-serif;
+  }
+
+
+  .btn-container {
+    display: flex;
+    gap: 10px; /* ระยะห่างระหว่างปุ่ม */
+    align-items: center; /* จัดให้อยู่แนวเดียวกัน */
+  }
+  
+.btn-add,.btn-delete {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: "Noto Sans Thai", sans-serif;
+    background-color: #1C3B58;
+    color: white;
+  }
+  
+
+  :root {
+    --primary-color: #3498db;
+    --secondary-color: #007C4B
+    ;
+    --text-color: white;
+    --hover-color: #2980b9;
+}
+
+.expand-button {
+  font-family: "Noto Sans Thai", sans-serif;
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    
+}
+
+.expand-button::before {
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255,255,255,0.2);
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    opacity: 0;
+}
+
+.expand-button:hover::before {
+    opacity: 1;
+}
+
+.expand-button:hover {
+    background-color: var(--hover-color);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+.expand-button.expanded {
+    background-color: var(--secondary-color);
+}
+
+.expand-button svg {
+    margin-right: 8px;
+
+}
+
+
+  /* ปุ่มเพิ่ม */
+  .btn-add {
+    background-color: #4B4B4B; /* สีเทาเข้มสำหรับสถานะปกติ */
+    color: white;
+}
+
+.btn-add:hover {
+    background-color: #666666; /* สีเทาเข้มที่สว่างขึ้นนิดหน่อยเมื่อ hover */
+}
+
+/* ปุ่มบันทึก */
+  .save-button {
+    background-color: #155535;
+    color: white;
+  }
+  .save-button:hover {
+    background-color: #0d3f28; /* สีเขียวเข้มขึ้นเมื่อ hover */
+  }
+
+
+  /* ปุ่มแก้ไข */
+  .edit-button {
+    background-color: #F6B541;
+    color: black;
+  }
+  .edit-button:hover {
+    background-color: #e19b2a; /* สีส้มเข้มขึ้นเมื่อ hover */
+  }
+
+  /* ปุ่มลบ*/
+  .btn-delete {
+    background-color: red;
+    color: white;
+}
+  .btn-delete:hover {
+    background-color: darkred;
+}
+
+
+select, input[type="text"] {
+  font-family: "Noto Sans Thai", sans-serif;
+  font-size: 16px;
+}
+
+
+/* popup บันทึกข้อมูล */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-container {
+  background-color: #155535;
+  width: 350px;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.popup-icon {
+  width: 80px;
+  height: 80px;
+  color: white;
+  margin: 0 auto 20px;
+  animation: bounce 1s infinite;
+}
+
+.popup-title {
+  color: white;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.popup-message {
+  color: white;
+  margin-bottom: 25px;
+}
+
+.popup-close {
+  font-family: "Noto Sans Thai", sans-serif;
+  background-color: white;
+  color: #155535;
+  border: 2px solid white;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.popup-close:hover {
+  background-color: #f0f0f0;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+.popup-close:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* popup ยืนยันการลบ */
+.delete-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.delete-modal-container {
+  background-color: white;
+  width: 350px;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.delete-modal-icon {
+  width: 80px;
+  height: 80px;
+  color: #DC2626;
+  margin: 0 auto 20px;
+  animation: shake 0.5s;
+}
+
+.delete-modal-title {
+  color: #DC2626;
+  font-size: 24px;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.delete-modal-message {
+  color: #4B5563;
+  margin-bottom: 25px;
+}
+
+.delete-modal-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.delete-modal-cancel, .delete-modal-confirm {
+  font-family: "Noto Sans Thai", sans-serif;
+  padding: 10px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.delete-modal-cancel {
+  background-color: #F3F4F6;
+  color: #4B5563;
+  border-color: #E5E7EB;
+}
+
+.delete-modal-confirm {
+  background-color: #DC2626;
+  color: white;
+}
+
+.delete-modal-cancel:hover {
+  background-color: #E5E7EB;
+}
+
+.delete-modal-confirm:hover {
+  background-color: #B91C1C;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-5px); }
+  20%, 40%, 60%, 80% { transform: translateX(5px); }
+}
+
+
+
+
+
+
+
+td[colspan] {
+  background-color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/* กำหนดสีพื้นหลังของแถวเลขคี่ */
+#data-table tbody tr:nth-child(odd) {
+  background-color: white;
+}
+
+/* กำหนดสีพื้นหลังของแถวเลขคู่ */
+#data-table tbody tr:nth-child(even) {
+  background-color: #fdfcf4;
+}
+
+
+#dataTable tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+#dataTable tbody tr:nth-child(even) {
+  background-color: #fdfcf4;
+}
+
+input:disabled, 
+select:disabled {
+    cursor: not-allowed;
+}
+
+/* สไตล์สำหรับไอคอน */
+.header .icon {
+  transition: transform 0.3s ease; /* ทำให้ภาพเปลี่ยนแปลงอย่างนุ่มนวล */
+}
+
+/* เมื่อ hover ที่ภาพ */
+.header .icon:hover {
+  transform: scale(1.07);
+  cursor: pointer;
+}
+
+
+
+/* ตาราง */
+/* สีพื้นหลังของหัวข้อ */
+th {
+  background-color: #155535
+  ; /* สีเขียว */
+  color: white; /* สีตัวอักษร */
+  padding: 10px;
+}
+
+.editable:empty:before {
+  content: attr(data-placeholder); /* ใช้ข้อความจาก data-placeholder */
+  color: gray; /* สีตัวอักษรจางๆ */
+  font-size:14px;
+}
+
+

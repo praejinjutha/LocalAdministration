@@ -1,93 +1,135 @@
-
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="th">
 <head>
-  <meta charset="utf-8">
-  <meta content="width=device-width, initial-scale=1.0" name="viewport">
-
-  <title>Home thai</title>
-  <meta content="" name="description">
-  <meta content="" name="keywords">
-
-  <!-- Favicons -->
-  <link href="../assets/img/favicon.png" rel="icon">
-  <link href="../assets/img/apple-touch-icon.png" rel="apple-touch-icon">
-
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Thasadith:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
-  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>หน้าเว็บตัวอย่าง</title>
 
 
-  <!-- Vendor CSS Files -->
-  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-  <link href="../assets/vendor/aos/aos.css" rel="stylesheet">
-  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-  <link href="../assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@100..900&display=swap" rel="stylesheet">
 
-  <!-- Template Main CSS File -->
-  <link href="../assets/css/main.css" rel="stylesheet">
 
+    <style>
+
+
+body {
+    font-family: "Noto Sans Thai", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2 ;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: flex-start;
+    /* max-width: 1200px; */
+    margin-top:35px;
+}
+
+.section {
+    width: 250px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.header {
+    background-color: #155535;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;     
+    justify-content: center;
+    align-items: center;
+}
+
+.item {
+    background-color: #D9D9D9;
+    padding: 12px;
+    margin-top: 1px;
+    font-size: 18px;
+    text-align: left;
+    transition: background-color 0.3s, transform 0.2s;
+    color: black;
+}
+
+.item:hover {
+    background-color: #bbb;
+    transform: scale(1.03);
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+
+
+    </style>
 </head>
+<body>
+    <div class="container">
+        <div class="section">
+            <div class="header">ส่วนที่ ๑</div>
 
-<body class="page-index">
+            <a href="<?= site_url('sec1') ?>">
+                <div class="item">(๑) ด้านกายภาพ</div>
+            </a>
 
-  <!-- ======= Header ======= -->
-  <header id="header" class="header d-flex align-items-center fixed-top">
-    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-    <a href="<?= site_url('dashboard') ?>" class="logo d-flex align-items-center">
-    <img src="../assets/img/logo.png" alt="">
-</a>
-      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
-      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
-      <nav id="navbar" class="navbar">
-        <ul>
-        <li><a href="<?= site_url('dashboard') ?>" class="active">หน้าหลัก</a></li>
-          <li><a href="<?= site_url('Lesson') ?>">บทเรียน</a></li>
+            <a href="<?= site_url('Sec1/sub2p1') ?>">
+            <div class="item">(๒) ด้านการเมือง/การปกครอง</div>
+            </a>
 
-        </ul>
-      </nav><!-- .navbar -->
+            <a href="<?= site_url('Sec1/sub3p1') ?>">
+            <div class="item">(๓) ประชากร</div>
+            </a>
+            
+            <a href="<?= site_url('Sec1/sub4p1') ?>">
+            <div class="item">(๔) สภาพทางสังคม</div>
+            </a>
+
+            <a href="<?= site_url('Sec1/sub5p1') ?>">
+            <div class="item">(๕) ระบบบริการพื้นฐาน</div>
+            </a>
+
+            <a href="<?= site_url('Sec1/sub6p1') ?>">
+            <div class="item">(๖) ระบบเศรษฐกิจ</div>
+            </a>
+
+            <a href="<?= site_url('Sec1/sub7p1') ?>">
+            <div class="item">(๗) ศาสนา ประเพณี วัฒนธรรม</div>
+            </a>
+
+            <a href="<?= site_url('Sec1/sub8p1') ?>">
+            <div class="item">(๘) ทรัพยากรธรรมชาติ</div>
+            </a>
+            
+            <a href="<?= site_url('Sec1/sub9') ?>">
+            <div class="item">(๙) อื่น ๆ</div>
+            </a>
+        </div>
+        <div class="section">
+            <div class="header">ส่วนที่ ๒</div>
+            <div class="item">(๑) ด้าน</div>
+        </div>
+        <div class="section">
+            <div class="header">ส่วนที่ ๓</div>
+            <div class="item">(๑) ด้าน</div>
+        </div>
     </div>
-  </header><!-- End Header -->
-
-  <!-- ======= Hero Section ======= -->
-
-  <section id="hero" class="hero d-flex align-items-center">
-  <div class="container">
-    <div class="col-xl-4 d-flex justify-content-center align-items-center"> <!-- เพิ่มคลาส align-items-center -->
-      <div class="text-center">
-        <h2 data-aos="fade-up">ภาษาไทย <br> ภาษาสนุก</h2>
-        <a href="#about" class="btn-get-started">Get Started</a>
-      </div>
-    </div>
-  </div>
-</section><!-- End Hero Section -->
-
-
-
-
-  
-
-
-
-  <!-- Vendor JS Files -->
-  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="../assets/vendor/aos/aos.js"></script>
-  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-  <script src="../assets/vendor/php-email-form/validate.js"></script>
-
-  <!-- Template Main JS File -->
-  <script src="../assets/js/main.js"></script>
-
 </body>
-
 </html>
