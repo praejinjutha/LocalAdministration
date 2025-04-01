@@ -143,7 +143,7 @@ body {
       <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
         <div class="post-box">
           <h4 class="title"><a href="prose" class="stretched-link" style="font-size: 28px; color: #8c6239;"> ✤ บทร้อยแก้ว</a></h4>
-          <a href="prose" class="stretched-link"></a>
+          <a href="Literature/prose" class="stretched-link"></a>
         </div>
       </div>
 
@@ -151,7 +151,7 @@ body {
       <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
         <div class="post-box">
           <h4 class="title"><a href="3" class="stretched-link" style="font-size: 28px; color: #8c6239;"> ✤ กาพย์ยานี</a></h4>
-          <a href="kapyani" class="stretched-link"></a>
+          <a href="Literature/kapyani" class="stretched-link"></a>
         </div>
       </div>
 
@@ -159,7 +159,7 @@ body {
 <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
   <div class="post-box">
     <h4 class="title"><a href="3" class="stretched-link" style="font-size: 28px; color: #8c6239;" >✤ บทดอกสร้อยสุภาษิต</a></h4>
-    <a href="botdoksoi" class="stretched-link"></a>
+    <a href="Literature/botdoksoi" class="stretched-link"></a>
   </div>
 </div>
 
@@ -167,7 +167,7 @@ body {
 <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
   <div class="post-box">
     <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px; color: #8c6239; " > ✤ โคลง</a></h4>
-    <a href="sonnets" class="stretched-link"></a>
+    <a href="Literature/sonnets" class="stretched-link"></a>
   </div>
 </div>
 
@@ -176,7 +176,7 @@ body {
 <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
   <div class="post-box">
   <h4 class="title"><a href="poetry" class="stretched-link" style="font-size: 28px; color: #8c6239;"> ✤ บทร้อยกรอง</a></h4>
-  <a href="poetry" class="stretched-link"></a>
+  <a href="Literature/poetry" class="stretched-link"></a>
 </div>
 </div>
 
@@ -184,7 +184,7 @@ body {
 <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
   <div class="post-box">
     <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px; color: #8c6239;" >✤ กลอน</a></h4>
-    <a href="glon" class="stretched-link"></a>
+    <a href="Literature/glon" class="stretched-link"></a>
   </div>
 </div>
 
@@ -192,7 +192,7 @@ body {
 <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
   <div class="post-box">
     <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px; color: #8c6239;" > ✤ บทร้องเล่นของเด็ก</a></h4>
-    <a href="botlenkongdek" class="stretched-link"></a>
+    <a href="Literature/botlenkongdek" class="stretched-link"></a>
   </div>
 </div>
 
@@ -200,7 +200,7 @@ body {
 <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
   <div class="post-box">
     <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px; color: #8c6239;" > ✤ ภาษาพาที</a></h4>
-    <a href="patee" class="stretched-link"></a>
+    <a href="Literature/patee" class="stretched-link"></a>
   </div>
 </div>
 
@@ -209,7 +209,7 @@ body {
   <div class="post-box">
     <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px; color: #8c6239;" > ✤ บทเพลงกล่อมเด็ก
 </a></h4>
-<a href="botklomdek" class="stretched-link"></a>
+<a href="Literature/botklomdek" class="stretched-link"></a>
   </div>
 </div>
 
@@ -217,16 +217,15 @@ body {
 <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
   <div class="post-box">
     <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px; color: #8c6239;" > ✤ บทอาขยาน</a></h4>
-  </div>
-  <a href="botarkayan" class="stretched-link"></a>
+  <a href="Literature/botarkayan" class="stretched-link"></a>
 </div>
-
+</div>
 
 <!--บทสักวา-->
 <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
   <div class="post-box">
     <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px; color: #8c6239;" >✤ บทสักวา</a></h4>
-    <a href="sakkawa" class="stretched-link"></a>
+    <a href="Literature/sakkawa" class="stretched-link"></a>
   </div>
 </div>
 
@@ -234,7 +233,7 @@ body {
 <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
   <div class="post-box">
     <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px; color: #8c6239;" >✤ สำนวนไทย</a></h4>
-    <a href="sumnuanthai" class="stretched-link"></a>
+    <a href="Literature/sumnuanthai" class="stretched-link"></a>
   </div>
 </div>
 
@@ -242,7 +241,7 @@ body {
 <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
   <div class="post-box">
     <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px; color: #8c6239;" >✤ สุภาษิตไทย</a></h4>
-    <a href="supasit" class="stretched-link"></a>
+    <a href="Literature/supasit" class="stretched-link"></a>
   </div>
 </div>
 
@@ -250,7 +249,7 @@ body {
 <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
   <div class="post-box">
     <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px; color: #8c6239;" >✤ คำพังเพย</a></h4>
-    <a href="kumpungpoei" class="stretched-link"></a>
+    <a href="Literature/kumpungpoei" class="stretched-link"></a>
   </div>
 </div>
 
@@ -258,7 +257,7 @@ body {
 <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
   <div class="post-box">
     <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px; color: #8c6239;" >✤ ทำนองสรภัญญะ</a></h4>
-    <a href="tumnongsonpanya" class="stretched-link"></a>
+    <a href="Literature/tumnongsonpanya" class="stretched-link"></a>
   </div>
 </div>
 
@@ -266,7 +265,7 @@ body {
 <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
   <div class="post-box">
     <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px; color: #8c6239;" >✤ ทำนองเสนาะ</a></h4>
-    <a href="tumnongsanor" class="stretched-link"></a>
+    <a href="Literature/tumnongsanor" class="stretched-link"></a>
   </div>
 </div>
 
@@ -275,7 +274,7 @@ body {
 <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
   <div class="post-box">
     <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px; color: #8c6239;" >✤ วรรณกรรมพื้นบ้าน</a></h4>
-    <a href="wannagum" class="stretched-link"></a>
+    <a href="Literature/wannagum" class="stretched-link"></a>
   </div>
 </div>
 
@@ -283,7 +282,7 @@ body {
 <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
   <div class="post-box">
     <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px; color: #8c6239;" >✤ บทอาเศียรวาท</a></h4>
-    <a href="botrsian" class="stretched-link"></a>
+    <a href="Literature/botrsian" class="stretched-link"></a>
   </div>
 </div>
 
@@ -291,7 +290,7 @@ body {
 <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
   <div class="post-box">
     <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px; color: #8c6239;" >✤ บทร้อยกรองร่วมสมัย</a></h4>
-    <a href="botroyklong" class="stretched-link"></a>
+    <a href="Literature/botroyklong" class="stretched-link"></a>
   </div>
 </div>
 
@@ -299,7 +298,7 @@ body {
 <div class="col-xl-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
   <div class="post-box">
     <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px; color: #8c6239;" >✤ คำขวัญ</a></h4>
-    <a href="kumkwan" class="stretched-link"></a>
+    <a href="Literature/kumkwan" class="stretched-link"></a>
   </div>
 </div>
 

@@ -185,42 +185,39 @@ img {
 
 <div class="col-lg-4 col-md-6 service-item" data-aos-delay="100">
     <div class="service-content d-flex" data-aos="fade-up" data-aos-delay="400">
-        <h4 class="title"><a href="1" class="stretched-link" style="font-size: 28px; "> ✤ มาตราตัวสะกดแม่กก</a></h4>
-    </div><!-- End Service Content -->
-</div><!-- End Service Item -->
-
-
-
+        <h4 class="title"><a href="..\assets\avtivitypdf\11.pdf" class="stretched-link" style="font-size: 28px; "> ✤ มาตราตัวสะกดแม่กก</a></h4>
+    </div>
+</div>
 
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px;"> ✤ มาตราตัวสะกดแม่กง</a></h4>
-          </div><!-- End Service Item -->
+              <h4 class="title"><a href="..\assets\avtivitypdf\12.pdf" class="stretched-link" style="font-size: 28px;"> ✤ มาตราตัวสะกดแม่กง</a></h4>
+          </div>
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px;"> ✤ มาตราตัวสะกดแม่กด</a></h4>
-          </div><!-- End Service Item -->
+              <h4 class="title"><a href="..\assets\avtivitypdf\13.pdf" class="stretched-link" style="font-size: 28px;"> ✤ มาตราตัวสะกดแม่กด</a></h4>
+          </div>
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px;" > ✤ มาตราตัวสะกดแม่กน</a></h4>
-          </div><!-- End Service Item -->
+              <h4 class="title"><a href="..\assets\avtivitypdf\14.pdf" class="stretched-link" style="font-size: 28px;" > ✤ มาตราตัวสะกดแม่กน</a></h4>
+          </div>
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-              <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px;"> ✤ มาตราตัวสะกดแม่กบ</a></h4>
-          </div><!-- End Service Item -->
+              <h4 class="title"><a href="..\assets\avtivitypdf\15.pdf" class="stretched-link" style="font-size: 28px;"> ✤ มาตราตัวสะกดแม่กบ</a></h4>
+          </div>
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-              <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px;"> ✤ มาตราตัวสะกดแม่กม</a></h4>
-          </div><!-- End Service Item -->
+              <h4 class="title"><a href="..\assets\avtivitypdf\16.pdf" class="stretched-link" style="font-size: 28px;"> ✤ มาตราตัวสะกดแม่กม</a></h4>
+          </div>
 
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="50">
-              <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px;"> ✤ มาตราตัวสะกดแม่เกย</a></h4>
-          </div><!-- End Service Item -->
+              <h4 class="title"><a href="..\assets\avtivitypdf\17.pdf" class="stretched-link" style="font-size: 28px;"> ✤ มาตราตัวสะกดแม่เกย</a></h4>
+          </div>
 
           <div class="col-lg-4 col-md-6 service-item d-flex"  data-aos="fade-up" data-aos-delay="50">
-              <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px;"> ✤ มาตราตัวสะกดแม่เกอว</a></h4>
-          </div><!-- End Service Item -->
+              <h4 class="title"><a href="..\assets\avtivitypdf\18.pdf" class="stretched-link" style="font-size: 28px;"> ✤ มาตราตัวสะกดแม่เกอว</a></h4>
+          </div>
         </div>
       </div>
       </section><!-- End Our Services Section -->
@@ -243,51 +240,51 @@ img {
         
 <div class="col-lg-4 col-md-6 service-item" data-aos-delay="100">
     <div class="service-content d-flex" data-aos="fade-up" data-aos-delay="400">
-        <h4 class="title"><a href="1" class="stretched-link" style="font-size: 28px;  "> ✤ หาดอกไม้ในเพลง</a></h4>
-    </div><!-- End Service Content -->
-</div><!-- End Service Item -->
+        <h4 class="title"><a href="..\assets\avtivitypdf\1.pdf" class="stretched-link" style="font-size: 28px;  "> ✤ หาดอกไม้ในเพลง</a></h4>
+    </div>
+</div>
 
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px;"> ✤ อักษรนำ</a></h4>
-          </div><!-- End Service Item -->
+              <h4 class="title"><a href="..\assets\avtivitypdf\19.pdf" class="stretched-link" style="font-size: 28px;"> ✤ อักษรนำ</a></h4>
+          </div>
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px;"> ✤ ฝึกแต่งประโยค</a></h4>
-          </div><!-- End Service Item -->
+              <h4 class="title"><a href="..\assets\avtivitypdf\9.pdf" class="stretched-link" style="font-size: 28px;"> ✤ ฝึกแต่งประโยค</a></h4>
+          </div>
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px;" > ✤ วรรณยุกต์</a></h4>
-          </div><!-- End Service Item -->
+              <h4 class="title"><a href="..\assets\avtivitypdf\10.pdf" class="stretched-link" style="font-size: 28px;" > ✤ วรรณยุกต์</a></h4>
+          </div>
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-              <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px;"> ✤ คำที่มักเขียนผิด</a></h4>
-          </div><!-- End Service Item -->
+              <h4 class="title"><a href="..\assets\avtivitypdf\2.pdf" class="stretched-link" style="font-size: 28px;"> ✤ คำที่มักเขียนผิด</a></h4>
+          </div>
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-              <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px;"> ✤ คำที่มีตัวการันต์</a></h4>
-          </div><!-- End Service Item -->
+              <h4 class="title"><a href="..\assets\avtivitypdf\3.pdf" class="stretched-link" style="font-size: 28px;"> ✤ คำที่มีตัวการันต์</a></h4>
+          </div>
 
 
           <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="50">
-              <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px;"> ✤ คำประสม</a></h4>
-          </div><!-- End Service Item -->
+              <h4 class="title"><a href="..\assets\avtivitypdf\8.pdf" class="stretched-link" style="font-size: 28px;"> ✤ คำประสม</a></h4>
+          </div>
 
           <div class="col-lg-4 col-md-6 service-item d-flex"  data-aos="fade-up" data-aos-delay="50">
-              <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px;"> ✤ คำที่ใช้ บรร - บัน</a></h4>
-          </div><!-- End Service Item -->
+              <h4 class="title"><a href="..\assets\avtivitypdf\7.pdf" class="stretched-link" style="font-size: 28px;"> ✤ คำที่ใช้ บรร - บัน</a></h4>
+          </div>
 
           <div class="col-lg-4 col-md-6 service-item d-flex"  data-aos="fade-up" data-aos-delay="50">
-              <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px;"> ✤ คำควบกล้ำ</a></h4>
-          </div><!-- End Service Item -->
+              <h4 class="title"><a href="..\assets\avtivitypdf\6.pdf" class="stretched-link" style="font-size: 28px;"> ✤ คำควบกล้ำ</a></h4>
+          </div>
 
           <div class="col-lg-4 col-md-6 service-item d-flex"  data-aos="fade-up" data-aos-delay="50">
-              <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px;"> ✤ คำเป็น คำตาย</a></h4>
-          </div><!-- End Service Item -->
+              <h4 class="title"><a href="..\assets\avtivitypdf\4.pdf" class="stretched-link" style="font-size: 28px;"> ✤ คำเป็น คำตาย</a></h4>
+          </div>
 
           <div class="col-lg-4 col-md-6 service-item d-flex"  data-aos="fade-up" data-aos-delay="50">
-              <h4 class="title"><a href="#" class="stretched-link" style="font-size: 28px;"> ✤ คำคล้องจอง</a></h4>
-          </div><!-- End Service Item -->
+              <h4 class="title"><a href="..\assets\avtivitypdf\5.pdf" class="stretched-link" style="font-size: 28px;"> ✤ คำคล้องจอง</a></h4>
+          </div>
 
         </div>
         <div class="img-con">
@@ -340,7 +337,7 @@ serviceLostItems.forEach(item => {
 
 
 
-  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="..\assets\avtivitypdf\1.pdf" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 
   <!-- Vendor JS Files -->
