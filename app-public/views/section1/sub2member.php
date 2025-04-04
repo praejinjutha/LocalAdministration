@@ -97,12 +97,12 @@ body {
 </a>
 
 <a href="<?= site_url('Sec1/sub2p1') ?>" class="tab-item">
-    <button id="button1" class="buttont active">คณะผู้บริหาร</button>
+    <button id="button1" class="buttont">คณะผู้บริหาร</button>
 </a>
 
 
-<a href="<?= site_url('Sec1/sub2member') ?>" class="tab-item">
-    <button id="button2" class="buttont">สมาชิกสภา</button>
+<a href="<?= site_url('Sec1/territorial') ?>" class="tab-item">
+    <button id="button2" class="buttont active">สมาชิกสภา</button>
 </a>
 
 </div>
@@ -121,7 +121,7 @@ body {
             <th>คำนำหน้า</th>
             <th>ชื่อจริง</th>
             <th>นามสกุล</th>
-            <th>ตำแหน่ง</th>
+            <th>สมาชิกสภา อบต.</th>
             <!-- <th>การกระทำ</th> -->
         </tr>
     </thead>
@@ -144,15 +144,11 @@ body {
 </td>
 
 
-            <td>
-            <select style="width:100%; border: 1px solid #ccc; border-radius: 5px; padding: 5px; background-color: #f0f0f0;">
-    <option value="" disabled selected>เลือกตำแหน่ง</option>
-    <option>นายกองค์การบริหารส่วนตำบล</option>
-    <option>รองนายกองค์การบริหารส่วนตำบล</option>
-    <option>เลขานุการนายกองค์การบริหารส่วนตำบล</option>
-</select>
+<td>
+  หมู่ที่ 
+  <input type="text" style="margin-left:10px; width:50%; border: 1px solid #ccc; border-radius: 5px; padding: 5px; background-color: #f0f0f0;" placeholder="กรอกเลข">
+</td>
 
-            </td>
             <td>
                 <button class="btn-delete" onclick="deleteRow(this)">ลบ</button>
             </td>
@@ -263,15 +259,13 @@ function addRow() {
 
     cell3.appendChild(input2); // เพิ่ม input ไปที่เซลล์
 
-    // เพิ่มคอลัมน์: ตำแหน่ง (Dropdown)
+    // เพิ่มคอลัมน์: สมาชิกสภา อบต. (Dropdown)
     let cell4 = newRow.insertCell(4);
     cell4.innerHTML = ` 
-<select style="width:100%; border: 1px solid #ccc; border-radius: 5px; padding: 5px; background-color: white;">
-            <option value="" disabled selected>เลือกตำแหน่ง</option>
-            <option>นายกองค์การบริหารส่วนตำบล</option>
-            <option>รองนายกองค์การบริหารส่วนตำบล</option>
-            <option>เลขานุการนายกองค์การบริหารส่วนตำบล</option>
-        </select>
+<td>
+  หมู่ที่ 
+  <input type="text" style="margin-left:10px; width:50%; border: 1px solid #ccc; border-radius: 5px; padding: 5px; background-color: #f0f0f0;" placeholder="กรอกเลข">
+</td>
     `;
 
     // เพิ่มคอลัมน์: ปุ่มลบ

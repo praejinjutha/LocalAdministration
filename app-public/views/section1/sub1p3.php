@@ -25,7 +25,7 @@ input[name="geography"] {
     font-weight: bold;
     color: #333;
     background-color: #f9f9f9;
-    border: 2px solid #155535;
+    border: 2px solid #114007;
     border-radius: 5px;
     padding: 5px 10px;
     width: 200px;
@@ -117,26 +117,31 @@ td.editable input:enabled {
     background-color: #fff;  /* เปลี่ยนสีพื้นหลังเป็นสีขาวเมื่อเปิดการแก้ไข */
 }
 
+body {
+    padding-top: 90px; /* เพิ่มพื้นที่ด้านบนให้ไม่ถูก navbar บัง */
+}
+
   </style>
 
 </head>
 <body>
 
-    <div class="header">
-        <a href="<?= site_url('dashboard') ?>">
-          <img class="icon" src="../../assets/images/back.png" alt="Back">
-        </a>
-        <span>ส่วนที่ ๑ สภาพทั่วไปและข้อมูลพื้นฐาน</span>
-        <a href="<?= site_url('dashboard') ?>">
-          <img class="icon" src="../../assets/images/home.png" alt="Home">
-        </a>
+<div class="navbar">
+    <div class="logo-container">
+        <img class="icon" src="../../assets/images/logo.png" alt="Logo">
     </div>
+</div>
+
 
 
     <div class="container">
         <div class="menu">
 
-        <button class="custom-btn">(๑) ด้านกายภาพ</button>
+        <button class="custom-btn">
+      <span class="number">๑.</span>
+      <span>ด้านกายภาพ</span>
+    </button>
+
 
           <a href="<?= site_url('sec1') ?>">
             <button>(๑) ที่ตั้งของหมู่บ้านหรือชุมชนหรือตำบล</button>
@@ -145,7 +150,7 @@ td.editable input:enabled {
             <button>(๒) ลักษณะภูมิประเทศ</button>
           </a>
           <a href="<?= site_url('Sec1/sub1p3') ?>">
-            <button  class="active">(๓) ลักษณะภูมิอากาศ</button>
+            <button class="active">(๓) ลักษณะภูมิอากาศ</button>
           </a>
           <a href="<?= site_url('Sec1/sub1p4') ?>">
             <button>(๔) ลักษณะของดิน</button>
@@ -153,8 +158,14 @@ td.editable input:enabled {
         </div>
 
 
+
+
         <div class="content">
-        <div class="tab-menu">
+
+        <div class="button-tab" style="margin-top: 35px;">
+        <a href="<?= site_url('dashboard') ?>" class="tab-item">
+    <img class="back" src="../../assets/images/back.png" alt="Back">
+</a>
 </div>
 
 

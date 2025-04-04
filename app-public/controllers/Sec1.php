@@ -59,6 +59,12 @@ class Sec1 extends CI_Controller
         $this->load->view(THEMES, $this->data);
     }
 
+    public function Sub2member()
+    {        
+        $this->data['view_file'] = 'section1/sub2member';
+        $this->load->view(THEMES, $this->data);
+    }
+
     public function Sub2p2()
     {        
         $this->data['view_file'] = 'section1/sub2p2';

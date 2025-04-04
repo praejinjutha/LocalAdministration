@@ -67,30 +67,32 @@ select:disabled {
     color: #666;
 }
 
-
+body {
+    padding-top: 90px; /* เพิ่มพื้นที่ด้านบนให้ไม่ถูก navbar บัง */
+}
 
   </style>
 
 </head>
 <body>
 
-    <div class="header">
-        <a href="<?= site_url('dashboard') ?>">
-          <img class="icon" src="../../assets/images/back.png" alt="Back">
-        </a>
-        <span>ส่วนที่ ๑ สภาพทั่วไปและข้อมูลพื้นฐาน</span>
-        <a href="<?= site_url('dashboard') ?>">
-          <img class="icon" src="../../assets/images/home.png" alt="Home">
-        </a>
+<div class="navbar">
+    <div class="logo-container">
+        <img class="icon" src="../../assets/images/logo.png" alt="Logo">
     </div>
+</div>
 
 
     <div class="container">
         <div class="menu">
 
-        <button class="custom-btn">(๕) ระบบบริการพื้นฐาน</button>
+        <button class="custom-btn">
+        <span class="number" style="font-size: 20px;">๕.</span>
+        <spanclass="number" style="font-size: 24px;">ระบบบริการพื้นฐาน</span>
+    </button>
 
-          <a href="<?= site_url('Sec1/sub5p1') ?>">
+
+    <a href="<?= site_url('Sec1/sub5p1') ?>">
             <button>(๑) การคมนาคมขนส่ง (ทางบก, ทางน้ำ, ทางราง ฯลฯ)</button>
           </a>
           <a href="<?= site_url('Sec1/sub5p2') ?>">
@@ -100,7 +102,7 @@ select:disabled {
             <button>(๓) การประปา</button>
           </a>
           <a href="<?= site_url('Sec1/sub5p4') ?>">
-            <button  class="active">(๔) โทรศัพท์</button>
+            <button class="active">(๔) โทรศัพท์</button>
           </a>
           <a href="<?= site_url('Sec1/sub5p5') ?>">
             <button>(๕) ระบบโลจิสติกส์หรือการขนส่ง</button>
@@ -108,9 +110,13 @@ select:disabled {
         </div>
 
 
-
         <div class="content">
-    <div class="tab-menu"></div>
+
+        <div class="button-tab" style="margin-top: 35px;">
+        <a href="<?= site_url('dashboard') ?>" class="tab-item">
+    <img class="back" src="../../assets/images/back.png" alt="Back">
+</a>
+</div>
 
     <h3>คำสั่งการทำงานของเมนู</h3>
 

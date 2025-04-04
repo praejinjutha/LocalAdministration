@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>สภาพทั่วไปและข้อมูลพื้นฐาน</title>
-    <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
 
     <style>
 .input-box {
@@ -23,7 +23,7 @@
   font-family: "Noto Sans Thai", sans-serif;
   font-size: 16px;
   padding: 5px 10px;
-  background-color: #155535;
+  background-color: #114007;
   color: white;
   border: none;
   cursor: pointer;
@@ -47,28 +47,31 @@
     cursor: pointer;
 }
 
-
+body {
+    padding-top: 90px; /* เพิ่มพื้นที่ด้านบนให้ไม่ถูก navbar บัง */
+}
 
   </style>
 
 </head>
 <body>
 
-    <div class="header">
-        <a href="<?= site_url('dashboard') ?>">
-          <img class="icon" src="../../assets/images/back.png" alt="Back">
-        </a>
-        <span>ส่วนที่ ๑ สภาพทั่วไปและข้อมูลพื้นฐาน</span>
-        <a href="<?= site_url('dashboard') ?>">
-          <img class="icon" src="../../assets/images/home.png" alt="Home">
-        </a>
+<div class="navbar">
+    <div class="logo-container">
+        <img class="icon" src="../../assets/images/logo.png" alt="Logo">
     </div>
+</div>
+
 
 
     <div class="container">
         <div class="menu">
 
-        <button class="custom-btn">(๑) ด้านกายภาพ</button>
+        <button class="custom-btn">
+      <span class="number">๑.</span>
+      <span>ด้านกายภาพ</span>
+    </button>
+
 
           <a href="<?= site_url('sec1') ?>">
             <button>(๑) ที่ตั้งของหมู่บ้านหรือชุมชนหรือตำบล</button>
@@ -85,10 +88,15 @@
         </div>
 
 
-        <div class="content">
-        <div class="tab-menu">
-</div>
 
+
+        <div class="content">
+
+        <div class="button-tab" style="margin-top: 35px;">
+        <a href="<?= site_url('dashboard') ?>" class="tab-item">
+    <img class="back" src="../../assets/images/back.png" alt="Back">
+</a>
+</div>
 
 
 <h3>คำสั่งการทำงานของเมนู</h3>
@@ -166,6 +174,6 @@ function closePopup() {
 
     </script>
 
-    <!-- <script type="text/javascript" src="../assets/js/script.js"></script> -->
+    <!-- <script type="text/javascript" src="../../../assets/js/script.js"></script> -->
 </body>
 </html>

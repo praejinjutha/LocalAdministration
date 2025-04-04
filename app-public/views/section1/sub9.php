@@ -61,7 +61,7 @@ button:last-child {
   font-family: "Noto Sans Thai", sans-serif;
   font-size: 16px;
   padding: 5px 10px;
-  background-color: #155535;
+  background-color: #114007;
   color: white;
   border: none;
   cursor: pointer;

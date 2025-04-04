@@ -2,33 +2,81 @@ body {
   font-family: "Noto Sans Thai", sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f5f5f5;
+  background-color: #ffffff;
+}
+
+/* Style for the Navbar */
+.navbar {
+  position: fixed; /* ให้ navbar อยู่ที่ตำแหน่ง fix */
+  top: 0;
+  left: 0;
+  width: 100%; /* ทำให้ navbar ยาวเต็มความกว้าง */
+  background-image: url('../../assets/images/navbar.png'); /* ใช้รูป navbar */
+  background-color: #ffffff;
+  background-size: cover; /* ปรับให้รูปเต็มพื้นที่ */
+  background-position: center; /* จัดตำแหน่งภาพกลาง */
+  height: 80px; /* ความสูงของ navbar */
+  display: flex;
+  justify-content: flex-start; /* ชิดซ้าย */
+  align-items: center;
+  padding-left: 20px; /* เพิ่มระยะห่างจากขอบซ้าย */
+  z-index: 1000; /* ให้ navbar อยู่บนสุด */
+}
+
+.navbar .logo-container {
+  display: flex;
+  justify-content: flex-start; /* ชิดซ้าย */
+  align-items: center;
+}
+
+.navbar .logo-container img {
+  width: 220px;
+  height: 50px; /* ปรับขนาดของโลโก้ */
+  margin-left: 15px;
 }
 
 
 .custom-btn {
-  display: inline-block; /* ใช้ inline-block เพื่อให้มันเหมือนปุ่ม */
-  background-color: #155535 !important; /* สีพื้นหลัง */
-  color: white;
-  font-size: 20px;
-  height: 70px;
-  padding: 12px 20px; /* เพิ่มความสูงให้ปุ่ม */
-  border: none;
-  cursor: default !important; /* เคอร์เซอร์เป็นแบบปกติ */
-  line-height: 1.5; /* เพิ่มความสูงของบรรทัด */
-  border-radius: 5px; /* ขอบมน */
-  margin-bottom: 28px;
-  font-weight: 700;
+  display: flex !important;
+  border: none!important;
+  flex-direction: column !important;
+  justify-content: center !important; /* กึ่งกลางข้อความในปุ่มแนวตั้ง */
+  align-items: center !important; /* กึ่งกลางข้อความในปุ่มแนวนอน */
+  height: 100px !important;
+  width: 230px !important;
+  background-color: transparent !important;
+  color: #6d5922 !important;
+  font-size: 30px !important;
+  font-weight: 300 !important;
+  border-radius: 5px !important;
+  padding: 0 !important;
+  box-sizing: border-box !important;
+  pointer-events: none !important;
+  gap: 10px !important;
+  margin-bottom: 30px!important;
+  margin-left: auto !important; /* กึ่งกลางแนวนอน */
+  margin-right: auto !important; /* กึ่งกลางแนวนอน */
+  align-self: center !important; /* กึ่งกลางใน flex container */
+  user-select: none!important;
+}
+
+.custom-btn .number {
+  font-size: 40px !important;
+  line-height: 1 !important;
+}
+
+.custom-btn span:nth-child(2) {
+  line-height: 1 !important;
 }
 
 h3 {
-  margin-top: 35px;
+  margin-top: 45px;
 }
 
 
 
-.header {
-  background-color: #155535;
+/* .header {
+  background-color: #114007;
   color: white;
   padding: 15px;
   text-align: center;
@@ -38,7 +86,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-}
+} */
 
 .icon {
 display: inline-block;
@@ -47,43 +95,52 @@ height: 30px;
 background-size: cover;
 }
 
+
+
+
 .container {
   display: flex;
   height: calc(100vh - 50px);
+  margin-top: 1%;
 }
 
 
 /* แถบเมนูด้านข้าง */
 
 .menu {
-  width: 300px;
+  width: 290px;
   height: auto;
-  background-color: #D9D9D9;
   padding: 20px 10px 10px 10px;
+  flex-direction: column !important;
+  border-right: 1px solid #6d5922; 
 }
 
-/* เมื่อ hover ที่ปุ่ม แต่ไม่ใช่ปุ่มที่มีคลาส .active */
-.menu button:not(.active):hover {
-  background-color: #696969;
-  color: white;
-  cursor: pointer;
-}
+
+
+
 
 .menu button {
   display: block;
-  width: 100%;
+  width: 89%;
   padding: 10px;
-  border: none;
+  border: 1px solid #c4c4c4; /* เพิ่มเส้นขอบ */
   text-align: left;
   background-color: transparent;
   font-size: 16px;
   cursor: pointer;
   font-family: "Noto Sans Thai", sans-serif;
-
+  margin: 0 auto;
+  border-radius: 10px; /* ขอบมน */
+  margin-bottom: 10px;
+  transition: all 0.3s ease;
 }
 
+
+
+
 .menu .active {
-  background-color: #F6B541;
+  background-color: #114007;
+  color: white;
 }
 
 .content {
@@ -96,21 +153,84 @@ background-size: cover;
 }
 
 
+.button-tab {
+  display: flex;
+  align-items: center; /* จัดตำแหน่งให้รูปภาพและปุ่มอยู่กลางในแนวตั้ง */
+  gap: 10px; /* ระยะห่างระหว่างปุ่ม */
+}
 
+.tab-item img {
+  width: 30px; /* ปรับขนาดรูปตามต้องการ */
+  height: auto;
+  cursor: pointer;
+  transform: translateY(-2px);
+transition: all 0.5s ease;
+}
+
+.buttont {
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  border: 1px solid #c4c4c4; /* เพิ่มเส้นขอบ */
+  cursor: pointer;
+  font-size: 18px;
+  font-family: "Noto Sans Thai", sans-serif;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap; /* ป้องกันข้อความขึ้นบรรทัดใหม่ */
+  transition: all 0.3s ease;
+}
+
+.buttont:hover, .menu button:hover {
+  background-color: #dadada !important;
+  color: black !important;
+}
+
+
+.buttont.active, .menu button.active {
+  background-color: #114007 !important;
+  color: white !important;
+  /* border-bottom: 2px solid #6d5922; */
+}
+
+
+
+/* ตั้งค่า tab-menu ให้ชิดซ้ายสุด */
 .tab-menu {
   display: flex;
-  background-color: #D9D9D9;
+  background-color: transparent;
   height: 70px;
-  align-items: center; /* จัดตำแหน่งปุ่มให้ตรงกลางในแนวตั้ง */
+  justify-content: flex-start; /* ชิดซ้าย */
+  align-items: center;
+  gap: 0; /* ลบช่องว่างระหว่างรายการ */
+  padding: 0; /* ลบ padding */
+  margin: 0; /* ลบ margin */
+  width: 100%; /* ครอบเต็มความกว้าง */
 }
 
+/* ปรับ <a> และปุ่มให้ชิดติดกัน */
 .tab-menu a {
-  flex: 1;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+ 
 }
 
+.back {
+  width: 48px!important;
+  height: auto; /* ให้ความสูงปรับตามสัดส่วนของรูป */
+  margin-right:15px;
+}
+
+.back:hover {
+  transform: scale(1.1); /* ขยายขนาดขึ้น 10% เมื่อ hover */
+  opacity: 0.8; /* ลดความทึบลงเล็กน้อย */
+}
+
+/* ปรับปุ่ม */
 .tab-menu button {
-  width: calc(100% - 20px); /* ลดขนาดความกว้างลงเพื่อเผื่อ margin */
-  margin: 0 10px; /* ระยะห่างซ้ายขวาเท่ากัน */
   padding: 10px;
   background-color: #D9D9D9;
   border-radius: 5px;
@@ -118,14 +238,19 @@ background-size: cover;
   cursor: pointer;
   font-size: 18px;
   font-family: "Noto Sans Thai", sans-serif;
-  text-align: center;
+  margin: 0;
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap; /* ป้องกันข้อความขึ้นบรรทัดใหม่ */
 }
 
 
+
+
 .tab-menu .active button {
-  background-color: #F6B541!important;
+  background-color: #6d5922!important;
   color: black!important;
-  border-bottom: 2px solid #F6B541;
+  border-bottom: 2px solid #6d5922;
 }
 
 .tab-menu button:not(.active):hover {
@@ -190,11 +315,10 @@ background-size: cover;
   
 
   :root {
-    --primary-color: #3498db;
-    --secondary-color: #007C4B
-    ;
+    --primary-color: #6d5922;
+    --secondary-color: #114007;
     --text-color: white;
-    --hover-color: #2980b9;
+    --hover-color: #5b4a1e;
 }
 
 .expand-button {
@@ -258,23 +382,14 @@ background-size: cover;
     background-color: #666666; /* สีเทาเข้มที่สว่างขึ้นนิดหน่อยเมื่อ hover */
 }
 
-/* ปุ่มบันทึก */
-  .save-button {
-    background-color: #155535;
-    color: white;
-  }
-  .save-button:hover {
-    background-color: #0d3f28; /* สีเขียวเข้มขึ้นเมื่อ hover */
-  }
-
 
   /* ปุ่มแก้ไข */
-  .edit-button {
-    background-color: #F6B541;
+  .edit-button, .save-button {
+    background-color: #e6e7e8;
     color: black;
   }
-  .edit-button:hover {
-    background-color: #e19b2a; /* สีส้มเข้มขึ้นเมื่อ hover */
+  .edit-button:hover, .save-button:hover {
+    background-color: #d1d3d4; /* สีส้มเข้มขึ้นเมื่อ hover */
   }
 
   /* ปุ่มลบ*/
@@ -308,7 +423,7 @@ select, input[type="text"] {
 }
 
 .popup-container {
-  background-color: #155535;
+  background-color: #114007;
   width: 350px;
   padding: 30px;
   border-radius: 12px;
@@ -339,7 +454,7 @@ select, input[type="text"] {
 .popup-close {
   font-family: "Noto Sans Thai", sans-serif;
   background-color: white;
-  color: #155535;
+  color: #114007;
   border: 2px solid white;
   padding: 10px 25px;
   border-radius: 8px;
@@ -505,7 +620,7 @@ select:disabled {
 /* ตาราง */
 /* สีพื้นหลังของหัวข้อ */
 th {
-  background-color: #155535
+  background-color: #114007
   ; /* สีเขียว */
   color: white; /* สีตัวอักษร */
   padding: 10px;

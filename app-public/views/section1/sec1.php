@@ -7,6 +7,12 @@
     <link rel="stylesheet" type="text/css" href="../assets/css/style.css">
 
     <style>
+
+body {
+    padding-top: 90px; /* เพิ่มพื้นที่ด้านบนให้ไม่ถูก navbar บัง */
+}
+
+
 .input-box {
   font-family: "Noto Sans Thai", sans-serif;
   font-size: 16px;
@@ -17,13 +23,15 @@
   position: relative; /* เพิ่มตำแหน่งสัมพัทธ์ */
   padding-right: 110px; /* เพิ่มพื้นที่ด้านขวาสำหรับปุ่ม */
   text-align: left; /* จัดข้อความชิดซ้าย */
+  /* width: 100%;
+  max-width: 800px; */
 }
 
 .input-box::-webkit-file-upload-button {
   font-family: "Noto Sans Thai", sans-serif;
   font-size: 16px;
   padding: 5px 10px;
-  background-color: #155535;
+  background-color: #114007;
   color: white;
   border: none;
   cursor: pointer;
@@ -54,26 +62,30 @@ input[type="file"]:disabled {
 
 
 
+
+
   </style>
 
 </head>
 <body>
 
-    <div class="header">
-        <a href="<?= site_url('dashboard') ?>">
-          <img class="icon" src="../assets/images/back.png" alt="Back">
-        </a>
-        <span>ส่วนที่ ๑ สภาพทั่วไปและข้อมูลพื้นฐาน</span>
-        <a href="<?= site_url('dashboard') ?>">
-          <img class="icon" src="../assets/images/home.png" alt="Home">
-        </a>
+<div class="navbar">
+    <div class="logo-container">
+        <img class="icon" src="../assets/images/logo.png" alt="Logo">
     </div>
+</div>
+
 
 
     <div class="container">
         <div class="menu">
 
-        <button class="custom-btn">(๑) ด้านกายภาพ</button>
+        <button class="custom-btn">
+      <span class="number">๑.</span>
+      <span>ด้านกายภาพ</span>
+    </button>
+
+
           <a href="<?= site_url('sec1') ?>">
             <button class="active">(๑) ที่ตั้งของหมู่บ้านหรือชุมชนหรือตำบล</button>
           </a>
@@ -89,13 +101,29 @@ input[type="file"]:disabled {
         </div>
 
 
-        <div class="content">
-        <div class="tab-menu">
-  <a href="<?= site_url('sec1') ?>" class="active"><button>(๑) ที่ตั้ง</button></a>
-  <a href="<?= site_url('Sec1/territorial') ?>"><button>(๒) อาณาเขต</button></a>
-  <a href="<?= site_url('Sec1/area') ?>"><button>(๓) พื้นที่</button></a>
-</div>
 
+
+        <div class="content">
+
+        <div class="button-tab" style="margin-top: 35px;">
+        <a href="<?= site_url('dashboard') ?>" class="tab-item">
+    <img class="back" src="../assets/images/back.png" alt="Back">
+</a>
+
+<a href="<?= site_url('sec1') ?>" class="tab-item">
+    <button id="button1" class="buttont active">(๑) ที่ตั้ง</button>
+</a>
+
+
+<a href="<?= site_url('Sec1/territorial') ?>" class="tab-item">
+    <button id="button2" class="buttont">(๒) อาณาเขต</button>
+</a>
+
+<a href="<?= site_url('Sec1/area') ?>" class="tab-item">
+    <button id="button3" class="buttont">(๓) พื้นที่</button>
+</a>
+
+</div>
 
             <h3>คำสั่งการทำงานของเมนู</h3>
             <label>รายละเอียดที่ตั้ง</label>

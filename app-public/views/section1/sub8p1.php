@@ -67,28 +67,32 @@ select:disabled {
     color: #666;
 }
 
-
+body {
+    padding-top: 90px; /* เพิ่มพื้นที่ด้านบนให้ไม่ถูก navbar บัง */
+}
 
   </style>
 
 </head>
 <body>
 
-    <div class="header">
-        <a href="<?= site_url('dashboard') ?>">
-          <img class="icon" src="../../assets/images/back.png" alt="Back">
-        </a>
-        <span>ส่วนที่ ๑ สภาพทั่วไปและข้อมูลพื้นฐาน</span>
-        <a href="<?= site_url('dashboard') ?>">
-          <img class="icon" src="../../assets/images/home.png" alt="Home">
-        </a>
+<div class="navbar">
+    <div class="logo-container">
+        <img class="icon" src="../../assets/images/logo.png" alt="Logo">
     </div>
+</div>
 
 
     <div class="container">
-    <div class="menu">
-        <button class="custom-btn">(๘) ทรัพยากรธรรมชาติ</button>
-          <a href="<?= site_url('Sec1/sub8p1') ?>">
+        <div class="menu">
+
+        <button class="custom-btn">
+        <span class="number" style="font-size: 20px;">๘.</span>
+        <spanclass="number" style="font-size: 22px;">ทรัพยากรธรรมชาติ</span>
+    </button>
+
+
+    <a href="<?= site_url('Sec1/sub8p1') ?>">
             <button class="active">(๑) น้ำ</button>
           </a>
           <a href="<?= site_url('Sec1/sub8p2') ?>">
@@ -101,13 +105,16 @@ select:disabled {
             <button>(๔) ทรัพยากรธรรมชาติที่สำคัญขององค์กร
             ปกครองส่วนท้องถิ่น</button>
           </a>
-
         </div>
 
 
-
         <div class="content">
-    <div class="tab-menu"></div>
+
+        <div class="button-tab" style="margin-top: 35px;">
+        <a href="<?= site_url('dashboard') ?>" class="tab-item">
+    <img class="back" src="../../assets/images/back.png" alt="Back">
+</a>
+</div>
 
     <h3>คำสั่งการทำงานของเมนู</h3>
 

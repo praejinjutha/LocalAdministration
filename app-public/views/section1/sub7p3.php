@@ -23,7 +23,7 @@
   font-family: "Noto Sans Thai", sans-serif;
   font-size: 16px;
   padding: 5px 10px;
-  background-color: #155535;
+  background-color: #114007;
   color: white;
   border: none;
   cursor: pointer;
@@ -47,28 +47,32 @@
     cursor: pointer;
 }
 
-
+body {
+    padding-top: 90px; /* เพิ่มพื้นที่ด้านบนให้ไม่ถูก navbar บัง */
+}
 
   </style>
 
 </head>
 <body>
 
-    <div class="header">
-        <a href="<?= site_url('dashboard') ?>">
-          <img class="icon" src="../../assets/images/back.png" alt="Back">
-        </a>
-        <span>ส่วนที่ ๑ สภาพทั่วไปและข้อมูลพื้นฐาน</span>
-        <a href="<?= site_url('dashboard') ?>">
-          <img class="icon" src="../../assets/images/home.png" alt="Home">
-        </a>
+<div class="navbar">
+    <div class="logo-container">
+        <img class="icon" src="../../assets/images/logo.png" alt="Logo">
     </div>
+</div>
 
 
     <div class="container">
-    <div class="menu">
-        <button class="custom-btn">(๗) ศาสนา ประเพณี วัฒนธรรม</button>
-          <a href="<?= site_url('Sec1/sub7p1') ?>">
+        <div class="menu">
+
+        <button class="custom-btn">
+        <span class="number" style="font-size: 20px;">๗.</span>
+        <spanclass="number" style="font-size: 20px;">ศาสนา ประเพณี วัฒนธรรม</span>
+    </button>
+
+
+    <a href="<?= site_url('Sec1/sub7p1') ?>">
             <button>(๑) การนับถือศาสนา</button>
           </a>
           <a href="<?= site_url('Sec1/sub7p2') ?>">
@@ -80,14 +84,16 @@
           <a href="<?= site_url('Sec1/sub7p4') ?>">
             <button>(๔) OTOP สินค้าพื้นเมืองและของที่ระลึก</button>
           </a>
-
         </div>
 
 
         <div class="content">
-        <div class="tab-menu">
-</div>
 
+        <div class="button-tab" style="margin-top: 35px;">
+        <a href="<?= site_url('dashboard') ?>" class="tab-item">
+    <img class="back" src="../../assets/images/back.png" alt="Back">
+</a>
+</div>
 
 
 <h3>คำสั่งการทำงานของเมนู</h3>

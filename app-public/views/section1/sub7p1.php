@@ -67,28 +67,32 @@ select:disabled {
     color: #666;
 }
 
-
+body {
+    padding-top: 90px; /* เพิ่มพื้นที่ด้านบนให้ไม่ถูก navbar บัง */
+}
 
   </style>
 
 </head>
 <body>
 
-    <div class="header">
-        <a href="<?= site_url('dashboard') ?>">
-          <img class="icon" src="../../assets/images/back.png" alt="Back">
-        </a>
-        <span>ส่วนที่ ๑ สภาพทั่วไปและข้อมูลพื้นฐาน</span>
-        <a href="<?= site_url('dashboard') ?>">
-          <img class="icon" src="../../assets/images/home.png" alt="Home">
-        </a>
+<div class="navbar">
+    <div class="logo-container">
+        <img class="icon" src="../../assets/images/logo.png" alt="Logo">
     </div>
+</div>
 
 
     <div class="container">
-    <div class="menu">
-        <button class="custom-btn">(๗) ศาสนา ประเพณี วัฒนธรรม</button>
-          <a href="<?= site_url('Sec1/sub7p1') ?>">
+        <div class="menu">
+
+        <button class="custom-btn">
+        <span class="number" style="font-size: 20px;">๗.</span>
+        <spanclass="number" style="font-size: 20px;">ศาสนา ประเพณี วัฒนธรรม</span>
+    </button>
+
+
+    <a href="<?= site_url('Sec1/sub7p1') ?>">
             <button class="active">(๑) การนับถือศาสนา</button>
           </a>
           <a href="<?= site_url('Sec1/sub7p2') ?>">
@@ -100,13 +104,17 @@ select:disabled {
           <a href="<?= site_url('Sec1/sub7p4') ?>">
             <button>(๔) OTOP สินค้าพื้นเมืองและของที่ระลึก</button>
           </a>
-
         </div>
 
 
-
         <div class="content">
-    <div class="tab-menu"></div>
+
+        <div class="button-tab" style="margin-top: 35px;">
+        <a href="<?= site_url('dashboard') ?>" class="tab-item">
+    <img class="back" src="../../assets/images/back.png" alt="Back">
+</a>
+</div>
+
 
     <h3>คำสั่งการทำงานของเมนู</h3>
 
@@ -164,10 +172,11 @@ select:disabled {
     </tbody>
 </table>
 
-<div class="button-container">
-    <button id="edit-button" class="button edit-button" onclick="enableEdit()">แก้ไข</button>
-    <button id="save-button" class="button save-button" onclick="saveChanges()" style="display: none;">บันทึก</button>
+<div class="button-container" style="margin-bottom: 65px;">
+    <button id="edit-button" class="button edit-button" onclick="enableEdit()" style="margin-bottom: 20px;">แก้ไข</button>
+    <button id="save-button" class="button save-button" onclick="saveChanges()" style="display: none; margin-bottom: 20px;">บันทึก</button>
 </div>
+
 
 </div>
     </div>
@@ -251,7 +260,7 @@ function addRow() {
 
     // เพิ่มคอลัมน์: ชื่อสถานที่
     let cell2 = newRow.insertCell(1);
-    cell2.innerHTML = `<input type="text" style="width:90%; border: 1px solid #ccc; border-radius: 5px; padding: 5px;" placeholder="กรอกชื่อสถานที่">`;
+    cell2.innerHTML = `<input type="text" style="width:90%; border: 1px solid #ccc; border-radius: 5px; padding: 5px;" placeholder="กรอกข้อมูล">`;
 
     // เพิ่มคอลัมน์: จำนวน
     let cell3 = newRow.insertCell(2);

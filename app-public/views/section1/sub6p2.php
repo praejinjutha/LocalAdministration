@@ -23,7 +23,7 @@
   font-family: "Noto Sans Thai", sans-serif;
   font-size: 16px;
   padding: 5px 10px;
-  background-color: #155535;
+  background-color: #114007;
   color: white;
   border: none;
   cursor: pointer;
@@ -47,30 +47,32 @@
     cursor: pointer;
 }
 
-
+body {
+    padding-top: 90px; /* เพิ่มพื้นที่ด้านบนให้ไม่ถูก navbar บัง */
+}
 
   </style>
 
 </head>
 <body>
 
-    <div class="header">
-        <a href="<?= site_url('dashboard') ?>">
-          <img class="icon" src="../../assets/images/back.png" alt="Back">
-        </a>
-        <span>ส่วนที่ ๑ สภาพทั่วไปและข้อมูลพื้นฐาน</span>
-        <a href="<?= site_url('dashboard') ?>">
-          <img class="icon" src="../../assets/images/home.png" alt="Home">
-        </a>
+<div class="navbar">
+    <div class="logo-container">
+        <img class="icon" src="../../assets/images/logo.png" alt="Logo">
     </div>
+</div>
 
 
     <div class="container">
         <div class="menu">
 
-        <button class="custom-btn">(๖) ระบบเศรษฐกิจ</button>
+        <button class="custom-btn">
+        <span class="number" style="font-size: 20px;">๖.</span>
+        <spanclass="number" style="font-size: 24px;">ระบบเศรษฐกิจ</span>
+    </button>
 
-          <a href="<?= site_url('Sec1/sub6p1') ?>">
+
+    <a href="<?= site_url('Sec1/sub6p1') ?>">
             <button>(๑) การเกษตร</button>
           </a>
           <a href="<?= site_url('Sec1/sub6p2') ?>">
@@ -94,15 +96,16 @@
           <a href="<?= site_url('Sec1/sub6p8') ?>">
             <button>(๘) แรงงาน</button>
           </a>
- </div>
+        </div>
 
 
         <div class="content">
-        <div class="tab-menu">
+
+        <div class="button-tab" style="margin-top: 35px;">
+        <a href="<?= site_url('dashboard') ?>" class="tab-item">
+    <img class="back" src="../../assets/images/back.png" alt="Back">
+</a>
 </div>
-
-
-
 <h3>คำสั่งการทำงานของเมนู</h3>
             <label>การประมง</label>
 <textarea class="input-box" placeholder="กรอกรายละเอียดการประมง..." disabled></textarea>

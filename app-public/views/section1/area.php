@@ -38,25 +38,32 @@
         font-size: 16px;
     }
 
+    body {
+    padding-top: 90px; /* เพิ่มพื้นที่ด้านบนให้ไม่ถูก navbar บัง */
+}
+
   </style>
 
 </head>
 <body>
 
-    <div class="header">
-        <a href="<?= site_url('dashboard') ?>">
-          <img class="icon" src="../../assets/images/back.png" alt="Back">
-        </a>
-        <span>ส่วนที่ ๑ สภาพทั่วไปและข้อมูลพื้นฐาน</span>
-        <a href="<?= site_url('dashboard') ?>">
-          <img class="icon" src="../../assets/images/home.png" alt="Home">
-        </a>
+<div class="navbar">
+    <div class="logo-container">
+        <img class="icon" src="../../assets/images/logo.png" alt="Logo">
     </div>
+</div>
+
 
 
     <div class="container">
         <div class="menu">
-        <button class="custom-btn">(๑) ด้านกายภาพ</button>
+
+        <button class="custom-btn">
+      <span class="number">๑.</span>
+      <span>ด้านกายภาพ</span>
+    </button>
+
+
           <a href="<?= site_url('sec1') ?>">
             <button class="active">(๑) ที่ตั้งของหมู่บ้านหรือชุมชนหรือตำบล</button>
           </a>
@@ -72,11 +79,28 @@
         </div>
 
 
+
+
         <div class="content">
-        <div class="tab-menu">
-  <a href="<?= site_url('sec1') ?>"><button>(๑) ที่ตั้ง</button></a>
-  <a href="<?= site_url('Sec1/territorial') ?>"><button>(๒) อาณาเขต</button></a>
-  <a href="<?= site_url('Sec1/area') ?>" class="active"><button>(๓) พื้นที่</button></a>
+
+        <div class="button-tab" style="margin-top: 35px;">
+        <a href="<?= site_url('dashboard') ?>" class="tab-item">
+    <img class="back" src="../../assets/images/back.png" alt="Back">
+</a>
+
+<a href="<?= site_url('sec1') ?>" class="tab-item">
+    <button id="button1" class="buttont">(๑) ที่ตั้ง</button>
+</a>
+
+
+<a href="<?= site_url('Sec1/territorial') ?>" class="tab-item">
+    <button id="button2" class="buttont">(๒) อาณาเขต</button>
+</a>
+
+<a href="<?= site_url('Sec1/area') ?>" class="tab-item">
+    <button id="button3" class="buttont active">(๓) พื้นที่</button>
+</a>
+
 </div>
 
 
